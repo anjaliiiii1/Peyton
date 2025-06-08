@@ -1,8 +1,14 @@
-import numpy as np
-# This code snippet is intended to demonstrate the correct way to create a NumPy array.
+def freq_count(words):
+    freq = {}
 
-arr = np.array([1,3,2,4,2,7])
-# The array is created with the specified elements.
-print(arr)
+    for word in  words:
+        if  word in freq:
+            freq[word] += 1
+        else:
+            freq[word] = 1
+    return freq
 
-print("Anjali Yadav 022")
+word_list = input("Enter a list of words : ")
+word = word_list.split()
+result = freq_count(word)
+print(result)
